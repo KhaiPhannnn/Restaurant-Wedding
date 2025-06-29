@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán | Hoàng Long</title>
+  <link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+  <header class="pay-header">
+    <h1 class="brand">MAISON DE L’AMOUR SAIGON</h1>
+    <p class="slogan">Restaurant & Wedding Palace</p>
+  </header>
+
+  <section class="pay-section">
+    <h2 class="pay-title">THANH TOÁN</h2>
+    <div class="pay-content">
+      <div class="pay-left">
+        <h3>Thanh toán dịch vụ tổ chức sự kiện tiệc cưới</h3>
+        <input type="text" placeholder="Họ và tên">
+        <input type="text" placeholder="Mã hợp đồng">
+      </div>
+
+      <div class="pay-right">
+        <p><strong>Hình thức thanh toán</strong></p>
+        <p>Thanh toán qua cổng thanh toán điện tử (Online Banking)</p>
+        <p>Số tài khoản: 0005987461682325</p>
+        <p>Ngân hàng: Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)</p>
+        <p>Tên tài khoản: MAISON DE L’AMOUR SAIGON</p>
+
+        <p>Thanh toán bằng tiền mặt (vui lòng thanh toán tại địa điểm tổ chức)</p>
+
+        <p><strong>Thanh toán bằng thẻ tín dụng (Credit Card)</strong></p>
+        <div class="card-inputs">
+          <input type="text" placeholder="Số thẻ">
+          <input type="text" placeholder="CVV">
+          <input type="text" placeholder="Mã bưu điện">
+        </div>
+      </div>
+    </div>
+    <button class="pay-button" onclick="handlePayment()">Thanh toán</button>
+  </section>
+
+  <footer class="pay-footer">
+    <p>⚙ 36 Tôn Đức Thắng, phường Bến Nghé, Quận 1, TPHCM | 📞 0898664156 | 📧 maisondelamour@saigon.com</p>
+  </footer>
+
+  <script>
+    function handlePayment() {
+      alert("Thanh toán thành công!");
+      window.location.href = "home.html"; // Đường dẫn về trang chủ
+    }
+  </script>
+</body>
+</html>

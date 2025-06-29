@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4a54c;
+}
+
+.nav-links a.active {
+    color: #fff;
+    background: #d4a54c;
+    border-radius: 4px;
+    padding: 6px 16px;
+}
+
+.search-icon {
+    font-size: 18px;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+.branch-title {
+    color: #d4a54c;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.intro-section {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.intro-image {
+    width: 50%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.intro-text {
+    text-align: left;
+    width: 50%;
+}
+
+.intro-text h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+/* === Phần Sảnh Tiệc === */
+
+.hall-section {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.hall-title {
+    font-size: 24px;
+    color: #d4a54c;
+    margin-bottom: 20px;
+}
+
+.hall-description {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    color: #444;
+}
+
+.hall-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.hall-tabs a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.hall-tabs a:hover,
+.hall-tabs a.active {
+    color: #d4a54c;
+    border-bottom: 2px solid #d4a54c;
+}
+
+.hall-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.hall-image {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.hall-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 250px;
+}
+
+.hall-text h3 {
+    color: #d4a54c;
+    margin-bottom: 15px;
+    
+}
+
+.hall-text p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+/* Ẩn/hiện từng sảnh */
+.hall-detail-wrapper {
+    position: relative;
+}
+
+.hall-detail {
+    display: none; /* Mặc định ẩn */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+/* Chỉ sảnh có class "active" mới hiển thị */
+.hall-detail.active {
+    display: flex;
+}
+/* === Dịch Vụ === */
+
+.service-section {
+    padding: 60px 40px;
+    background: #faf8f3;
+    text-align: center;
+}
+
+.service-title {
+    font-size: 24px;
+    color: #d4a54c;
+    margin-bottom: 32px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.service-card {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s;
+}
+
+.service-card .overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(212,165,76,0.92);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px 0;
+    letter-spacing: 1px;
+    opacity: 0.95;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(212,165,76,0.18);
+}
+
+.service-card:hover img {
+    filter: brightness(0.7) blur(1px);
+}
+
+.service-card:hover .overlay {
+    background: rgba(212,165,76,1);
+    opacity: 1;
+}

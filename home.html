@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoàng Long - Chi Nhánh Lê Duẩn</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="Logo.jpg" alt="Hoàng Long logo">
+    </div>
+    <nav class="nav-links">
+      <a class="active" href="home.html">TRANG CHỦ</a>
+      <a href="service.html">DỊCH VỤ</a>
+      <a href="#">THỰC ĐƠN</a>
+      <a href="#">ƯU ĐÃI</a>
+      <a href="#">THƯ VIỆN ẢNH</a>
+      <a href="#">BLOG</a>
+      <a href="#">LIÊN HỆ</a>
+      <a href="#"><span class="search-icon">🔍</span></a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="branch-title">CHI NHÁNH KALINA SỐ 2 LÊ DUẨN</h1>
+    <div class="intro-section">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Tiệc cưới" class="intro-image">
+      <div class="intro-text">
+        <h2>GIỚI THIỆU</h2>
+        <p>
+          Trung tâm Hội Nghị – Tiệc Cưới KALINA có 2 chi nhánh tọa lạc tại Quận 1 và Quận Tân Bình, 
+          với việc đi lại thuận tiện, bãi giữ xe rộng rãi và thoáng mát...
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <section class="hall-section">
+    <h2 class="hall-title">SẢNH TIỆC TẠI HOÀNG LONG</h2>
+    <p class="hall-description">
+      Ngày cưới của bạn sẽ trở nên ý nghĩa và hoàn hảo hơn dưới sự biến tấu điệu nghệ của các chuyên gia tiệc cưới giàu kinh nghiệm tại Trung Tâm Hội Nghị – Tiệc Cưới Hoàng Long  sẽ giúp bạn không phải “đau đầu” khi lên kế hoạch tổ chức buổi hôn lễ nữa, từ khâu chuẩn bị cho đến quá trình diễn ra lễ cưới, mọi thứ sẽ được đi theo một quy trình chuyên nghiệp và sáng tạo. Hoàng Long được đánh giá cao và là sự lựa chọn hàng đầu của các cặp đôi cho ngày cưới trọng đại của mình, với sự tận tâm và tinh tế từ những tiểu tiết nhỏ nhất bên cạnh không gian và cơ sở vật chất được đầu tư chỉnh chu.
+    </p>
+
+    <nav class="hall-tabs">
+      <a href="#" class="tab-link active" data-target="bachlong">SẢNH BẠCH LONG</a>
+      <a href="#" class="tab-link" data-target="kimlong">SẢNH KIM LONG</a>
+      <a href="#" class="tab-link" data-target="honglong">SẢNH HỒNG LONG</a>
+      <a href="#" class="tab-link" data-target="kimhonglong">SẢNH KIM HỒNG LONG</a>
+    </nav>
+
+    <div class="hall-detail-wrapper">
+      <div class="hall-detail active" id="bachlong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Bạch Long" class="hall-image">
+        <div class="hall-text">
+          <h3>SẢNH BẠCH LONG</h3>
+          <p>Sảnh được thiết kế theo phong cách hiện đại, sang trọng...</p>
+        </div>
+      </div>
+
+      <div class="hall-detail" id="kimlong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Kim Long" class="hall-image">
+        <div class="hall-text">
+          <h3>SẢNH KIM LONG</h3>
+          <ul><li>Sức chứa lên đến hơn 150 khách</li></ul>
+        </div>
+      </div>
+
+      <div class="hall-detail" id="honglong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Hồng Long" class="hall-image">
+        <div class="hall-text">
+          <h3>SẢNH HỒNG LONG</h3>
+          <ul><li>Không gian ấm cúng, phù hợp tiệc nhỏ</li></ul>
+        </div>
+      </div>
+
+      <div class="hall-detail" id="kimhonglong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Kim Hồng Long" class="hall-image">
+        <div class="hall-text">
+          <h3>SẢNH KIM HỒNG LONG</h3>
+          <ul><li>Sức chứa đến 200 khách, thiết kế sang trọng</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const halls = document.querySelectorAll('.hall-detail');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        halls.forEach(h => h.classList.remove('active'));
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

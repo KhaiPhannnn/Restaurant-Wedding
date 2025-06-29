@@ -1,0 +1,125 @@
+/* Payment.css */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+.pay-header {
+  position: relative;
+  background-image: url('./Payment.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.pay-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.brand,
+.slogan {
+  position: relative;
+  z-index: 1;
+}
+
+.brand {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.pay-section {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.pay-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.pay-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.pay-left,
+.pay-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.pay-left h3 {
+  margin-bottom: 15px;
+}
+
+.pay-left input,
+.card-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.card-inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-inputs input {
+  flex: 1;
+  min-width: 100px;
+}
+
+.pay-button {
+  display: block;
+  margin: 30px auto 0 auto;
+  background-color: #bfa05b;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+  background-color: #a98b4d;
+}
+
+.pay-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+} 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoàng Long - Chi Nhánh Lê Duẩn</title>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="Logo.jpg" alt="Hoàng Long logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">TRANG CHỦ</a>
+            <a class="active" href="service.html">DỊCH VỤ</a>
+            <a href="#">THỰC ĐƠN</a>
+            <a href="#">ƯU ĐÃI</a>
+            <a href="#">THƯ VIỆN ẢNH</a>
+            <a href="#">BLOG</a>
+            <a href="#">LIÊN HỆ</a>
+            <a href="#"><span class="search-icon">🔍</span></a>
+        </nav>
+    </header>
+    <section class="hall-section">
+        <h2 class="hall-title">SẢNH TIỆC TẠI HOÀNG LONG</h2>
+    <p class="hall-description">
+        Ngày cưới của bạn sẽ trở nên ý nghĩa và hoàn hảo hơn dưới sự biến tấu điệu nghệ của các chuyên gia tiệc cưới 
+        giàu kinh nghiệm tại Trung Tâm Hội Nghị – Tiệc Cưới Hoàng Long sẽ giúp bạn không phải “đau đầu” khi lên kế hoạch 
+        tổ chức buổi hôn lễ nữa, từ khâu chuẩn bị cho đến quá trình diễn ra lễ cưới, mọi thứ sẽ được đi theo một quy trình 
+        chuyên nghiệp và sáng tạo. Hoàng Long được đánh giá cao và là sự lựa chọn hàng đầu của các cặp đôi cho ngày cưới 
+        trọng đại của mình, với sự tận tâm và tinh tế từ những tiểu tiết nhất bên cạnh không gian và cơ sở vật chất được 
+        đầu tư chỉnh chu.
+    </p>
+        <nav class="hall-tabs">
+    <a href="#" class="tab-link active" data-target="bachlong">SẢNH BẠCH LONG</a>
+    <a href="#" class="tab-link" data-target="kimlong">SẢNH KIM LONG</a>
+    <a href="#" class="tab-link" data-target="honglong">SẢNH HỒNG LONG</a>
+    <a href="#" class="tab-link" data-target="kimhonglong">SẢNH KIM HỒNG LONG</a>
+</nav>
+    <div class="hall-detail active" id="bachlong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Bạch Long" class="hall-image">
+        <div class="hall-text">
+            <h3>SẢNH BẠCH LONG</h3>
+            <p>
+                Sảnh được thiết kế theo phong cách hiện đại, sang trọng với tông màu trắng chủ đạo. Sảnh Bạch Long với 
+                sức chứa lên đến hơn 300 khách mời, phù hợp với các đám cưới quy mô vừa và lớn. Ngoài ra, sảnh tiệc còn 
+                là nơi chuyên tổ chức các sự kiện, hội nghị, hội thảo, workshop…
+            </p>
+        </div>
+    </div>
+
+    <div class="hall-detail" id="kimlong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Kim Long" class="hall-image">
+        <div class="hall-text">
+            <h3>SẢNH KIM LONG</h3>
+            <ul>
+                <li>Sức chứa lên đến hơn 150 khách</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hall-detail" id="honglong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Hồng Long" class="hall-image">
+        <div class="hall-text">
+            <h3>SẢNH HỒNG LONG</h3>
+            <ul>
+                <li>Không gian ấm cúng, phù hợp tiệc nhỏ</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hall-detail" id="kimhonglong">
+        <img src="SanhHoangLong.jpg" alt="Sảnh Kim Hồng Long" class="hall-image">
+        <div class="hall-text">
+            <h3>SẢNH KIM HỒNG LONG</h3>
+            <ul>
+                <li>Sức chứa đến 200 khách, thiết kế sang trọng</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+document.querySelectorAll('.tab-link').forEach(tab => {
+    tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Xóa active ở tất cả tab
+        document.querySelectorAll('.tab-link').forEach(t => t.classList.remove('active'));
+        // Thêm active cho tab được bấm
+        this.classList.add('active');
+        // Ẩn tất cả hall-detail
+        document.querySelectorAll('.hall-detail').forEach(h => h.classList.remove('active'));
+        // Hiện hall-detail tương ứng
+        const target = this.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+    });
+});
+</script>
+<section class="service-section">
+    <h2 class="service-title">DỊCH VỤ</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="TiecCuoi.jpg" alt="Tiệc cưới">
+        <div class="overlay">TIỆC CƯỚI</div>
+      </div>
+      <div class="service-card">
+        <img src="TiecThoiNoi.jpg" alt="Tiệc thôi nôi">
+        <div class="overlay">TIỆC THÔI NÔI</div>
+      </div>
+      <div class="service-card">
+        <img src="TiecTaiGia.jpg" alt="Tiệc tại gia">
+        <div class="overlay">TIỆC TẠI GIA</div>
+      </div>
+      <div class="service-card">
+        <img src="SuKien.jpg" alt="Hội nghị và sự kiện">
+        <div class="overlay">HỘI NGHỊ & SỰ KIỆN</div>
+      </div>
+    </div>
+  </section>
+   <section class="booking-section">
+    <h2 class="booking-title">ĐẶT TIỆC</h2>
+    <p class="booking-description">
+      Trung tâm Hội Nghị – Tiệc Cưới Hoàng Long có 2 chi nhánh tọa lạc tại Quận 1 và Quận Tân Bình, với việc đi lại thuận tiện,
+      bãi giữ xe rộng rãi và thoáng mát. Không gian sảnh tiệc được thiết kế sang trọng và ấm cúng, cùng với trang thiết bị âm thanh,
+      ánh sáng hiện đại với sức chứa lên đến 1.000 khách.
+    </p>
+    <form class="booking-form">
+      <div class="form-row">
+        <input type="text" placeholder="Họ tên" required>
+        <input type="text" placeholder="Số điện thoại" required>
+      </div>
+      <div class="form-row">
+        <input type="email" placeholder="Email" required>
+        <input type="date" placeholder="Ngày đặt" required>
+      </div>
+      <div class="form-row">
+        <input type="number" placeholder="Số khách" required>
+        <input type="number" placeholder="Số bàn" required>
+      </div>
+      <textarea rows="4" placeholder="Nội dung cần tư vấn"></textarea>
+      <button type="submit">ĐẶT TIỆC NGAY</button>
+    </form>
+  </section>
+</body>
+</html>
